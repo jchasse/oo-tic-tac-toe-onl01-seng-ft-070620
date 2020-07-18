@@ -64,13 +64,6 @@ class TicTacToe
   end
 
   def won?
-      # if WIN_COMBINATIONS.find do |win_combo|
-      #   if win_combo.all? {|num| board[num] == "X"}
-      #     return win_combo
-      #   elsif win_combo.all? {|num| board[num] == "O"}
-      #     return win_combo
-      #   end
-      # end
     WIN_COMBINATIONS.find do |win_combo|
       position_1_index = win_combo[0]
       position_2_index = win_combo[1]
@@ -97,19 +90,11 @@ class TicTacToe
   end
 
   def over?
-    won? != nil || full? == true
+    !!(won? or draw?)
   end
 
   def winner
-    if won? != nil
-      if turn_count.odd?
-        "X"
-      else
-        "O"
-      end
-    else
-      nil
-    end
+    won? && board[won?[0]]
   end
 
   def play
