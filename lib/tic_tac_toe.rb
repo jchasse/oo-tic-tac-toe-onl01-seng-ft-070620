@@ -70,6 +70,11 @@ class TicTacToe
         elsif win_combo.all? {|num| board[num] == "O"}
           return win_combo
         end
+      WIN_COMBINATIONS.find do |win_combo|
+        
+
+
+
       end
     end
   end
