@@ -40,6 +40,8 @@ class TicTacToe
   end
 
   def valid_move?(index)
+    position_taken?(index) && index.between
+
     input < 9 && index >= 0 && board[index] == " "
   end
 
