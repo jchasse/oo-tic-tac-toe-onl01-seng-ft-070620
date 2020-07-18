@@ -64,26 +64,24 @@ class TicTacToe
   end
 
   def won?
-      if WIN_COMBINATIONS.find do |win_combo|
-        if win_combo.all? {|num| board[num] == "X"}
-          return win_combo
-        elsif win_combo.all? {|num| board[num] == "O"}
-          return win_combo
-        end
-      WIN_COMBINATIONS.find do |win_combo|
-        position_1_index = win_combo[0]
-        position_2_index = win_combo[1]
-        position_3_index = win_combo[2]
+      # if WIN_COMBINATIONS.find do |win_combo|
+      #   if win_combo.all? {|num| board[num] == "X"}
+      #     return win_combo
+      #   elsif win_combo.all? {|num| board[num] == "O"}
+      #     return win_combo
+      #   end
+      # end
+    WIN_COMBINATIONS.find do |win_combo|
+      position_1_index = win_combo[0]
+      position_2_index = win_combo[1]
+      position_3_index = win_combo[2]
 
-        position_1_token = board[position_1_index]
-        position_2_token = board[position_2_index]
-        position_3_token = board[position_3_index]
+      position_1_token = board[position_1_index]
+      position_2_token = board[position_2_index]
+      position_3_token = board[position_3_index]
 
-
-
-
-
-      end
+      position_1_token == position_2_token &&
+      position_1_token == position_3_token
     end
   end
 
