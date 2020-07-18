@@ -89,8 +89,7 @@ class TicTacToe
   def full?
     board.all? do |token|
       token == "X" || token == "O"
-
-    turn_count == 9
+    end
   end
 
   def draw?
