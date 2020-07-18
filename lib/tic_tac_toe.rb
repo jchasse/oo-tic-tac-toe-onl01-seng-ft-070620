@@ -46,9 +46,7 @@ class TicTacToe
   end
 
   def turn_count
-    board.count do |x|
-      x == "X" || x == "O"
-    end
+    board.count {|space| space == "X" || space == "O"}
   end
 
   def current_player
