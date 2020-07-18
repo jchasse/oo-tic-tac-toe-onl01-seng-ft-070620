@@ -64,11 +64,11 @@ class TicTacToe
   end
 
   def won?
-      if WIN_COMBINATIONS.any? do |winning_array|
-        if winning_array.all? {|num| board[num] == "X"}
-          return winning_array
-        elsif winning_array.all? {|num| board[num] == "O"}
-          return winning_array
+      if WIN_COMBINATIONS.any? do |win_combo|
+        if win_combo.all? {|num| board[num] == "X"}
+          return win_combo
+        elsif win_combo.all? {|num| board[num] == "O"}
+          return win_combo
         end
       end
     end
