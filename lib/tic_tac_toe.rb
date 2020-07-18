@@ -39,8 +39,8 @@ class TicTacToe
     board[index] != " "
   end
 
-  def valid_move?(input)
-    input < 9 && input >= 0 && board[input] == " "
+  def valid_move?(index)
+    input < 9 && index >= 0 && board[index] == " "
   end
 
   def turn_count
