@@ -64,7 +64,7 @@ class TicTacToe
   end
 
   def won?
-      if WIN_COMBINATIONS.any? do |win_combo|
+      if WIN_COMBINATIONS.find do |win_combo|
         if win_combo.all? {|num| board[num] == "X"}
           return win_combo
         elsif win_combo.all? {|num| board[num] == "O"}
