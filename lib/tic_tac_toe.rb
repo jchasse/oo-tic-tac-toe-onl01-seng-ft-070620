@@ -41,8 +41,6 @@ class TicTacToe
 
   def valid_move?(index)
     !position_taken?(index) && index.between?(0,8)
-
-    input < 9 && index >= 0 && board[index] == " "
   end
 
   def turn_count
